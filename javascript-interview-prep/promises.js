@@ -22,4 +22,5 @@ fetchData()
     .catch((error) => {
         console.error(error); // Logging the error message if the promise is rejected
     });
+
     
