@@ -31,16 +31,26 @@
 // }
 //console.log(largestNum(arr));
 
-function findLargestNum(arrr) {
-    let largest = arrr[0];
+// function findLargestNum(arrr) {
+//     let largest = arrr[0];
   
-    for (let num of arrr) {
-      if (num > largest) {
-        largest = num;
-      }
-    }
+//     for (let num of arrr) {
+//       if (num > largest) {
+//         largest = num;
+//       }
+//     }
   
-    return largest;
-  }
+//     return largest;
+//   }
   
-  console.log(findLargestNum([87, 43, 232, 56, 37, 97, 443, 2]));
+//   console.log(findLargestNum([87, 43, 232, 56, 37, 97, 443, 2]));
+
+let arr=[1,2,3,3,4,4,5,6,7,7]
+// let unique=[...new Set(arr)]
+
+// console.log(unique)
+
+let unique =arr.filter((item ,index)=>{
+    return arr.indexOf(item)===index;
+})
+console.log(unique)
