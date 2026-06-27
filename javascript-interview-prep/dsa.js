@@ -45,12 +45,31 @@
   
 //   console.log(findLargestNum([87, 43, 232, 56, 37, 97, 443, 2]));
 
-let arr=[1,2,3,3,4,4,5,6,7,7]
+//let arr=[1,2,3,3,4,4,5,6,7,7]
 // let unique=[...new Set(arr)]
 
 // console.log(unique)
 
-let unique =arr.filter((item ,index)=>{
-    return arr.indexOf(item)===index;
-})
-console.log(unique)
+// let unique =arr.filter((item ,index)=>{
+//     return arr.indexOf(item)===index;
+// })
+// console.log(unique)
+
+let arr=[8,7,6,5];
+
+function secondLargest(arr){
+    let largest =0;
+    let secondlargest = 0;
+    
+    for(let num of arr){
+        if(num>largest){
+            secondlargest = largest;
+            largest =num;
+        }
+        else if (num > secondlargest && num !== largest) {
+            secondlargest = num;
+        }
+    }
+    return secondlargest
+}
+console.log(secondLargest(arr))
