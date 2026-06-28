@@ -126,4 +126,38 @@ function checkPalidrom(num){
     return str === reverse;
 }
 console.log(checkPalidrom(127))
+
+checking how many vowels are there
+function findVowel(str){
+    let counter = 0;
+    
+    for(let ch of str.toLowerCase()){
+        if('aeiou'.includes(ch)){
+            counter++
+        }
+    }return counter;
+}
+console.log(findVowel('Interviews'))
+instead of include
 */
+function countVowels(str) {
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i].toLowerCase();
+
+        if (
+            ch === "a" ||
+            ch === "e" ||
+            ch === "i" ||
+            ch === "o" ||
+            ch === "u"
+        ) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(countVowels("Interview")); 
