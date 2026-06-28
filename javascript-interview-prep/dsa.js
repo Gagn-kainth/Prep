@@ -113,4 +113,17 @@ function backstr(str){
     return str.split('').reverse().join('');
 }
 console.log(backstr('this is best'))
+
+PALIDROM NUM
+
+function checkPalidrom(num){
+    let str = num.toString();
+    let reverse=''
+    
+    for(let i = str.length -1 ;i>=0;i--){
+        reverse+=str[i]
+    }
+    return str === reverse;
+}
+console.log(checkPalidrom(127))
 */
