@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -144,6 +144,44 @@ function handleScroll() {
 //   }, 1000);
 // }
 
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event delegation</title>
+    <style>
+      #parent {
+        border: 1px solid black;
+        padding: 10px;
+        display: flex;
+      }
+      .btn {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        background-color: lightblue;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EVENT DELEGATION IN JS</h1>
+    <div id="parent" onclick="handleClick(event)">
+      <button class="btn">button 1</button>
+      <button class="btn">button 2</button>
+      <button class="btn">button 3</button>
+    </div>
+    <script>
+      function handleClick(event) {
+        if (event.target.classList.contains("btn")) {
+          console.log(event.target.textContent + " clicked");
+        }
+      }
+      //event bubbles up to the parent div, and we can handle the click event for all buttons using a single event listener on the parent.
     </script>
   </body>
 </html>
